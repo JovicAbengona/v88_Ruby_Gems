@@ -8,17 +8,17 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jovic Abengona"]
   spec.email         = ["jvlabengona@gmail.com"]
 
-  spec.summary       = "TODO: First gem assignment"
-  spec.description   = "TODO: First gem assignment in Ruby called 'Stringer'."
-  spec.homepage      = "TODO: https://github.com/JovicAbengona/v88_Ruby_Gems"
+  spec.summary       = "First gem assignment"
+  spec.description   = "First gem assignment in Ruby called 'Stringer'."
+  spec.homepage      = "https://github.com/JovicAbengona/v88_Ruby_Gems"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.4.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'https://github.com/JovicAbengona/v88_Ruby_Gems'"
+  spec.metadata["allowed_push_host"] = "https://github.com/JovicAbengona/v88_Ruby_Gems"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: https://github.com/JovicAbengona/v88_Ruby_Gems"
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/JovicAbengona/v88_Ruby_Gems"
+  spec.metadata["changelog_uri"] = "https://github.com/JovicAbengona/v88_Ruby_Gems/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
