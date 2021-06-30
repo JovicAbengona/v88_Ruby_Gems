@@ -9,8 +9,7 @@ module Stringer
   def self.spacify(*strings)
     result = ""
     strings.each do |string|
-      result += string if strings.at(0) == string
-      result += " #{string}" if strings.at(0) != string
+      result += strings.at(0) == string ? string : " #{string}"
     end
     result
   end
