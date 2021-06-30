@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 require_relative "spec_helper"
 
 RSpec.describe Stringer do
   it "concatenates undefined number of strings with a space" do
-    expect(Stringer.spacify "Doe", "Dimmadome", "Bryant", "Wade", "Curry").to eq("Doe Dimmadome Bryant Wade Curry")
+    expect(Stringer.spacify("Doe", "Dimmadome", "Bryant", "Wade", "Curry")).to eq("Doe Dimmadome Bryant Wade Curry")
   end
 
   it "change the remaining characters with ellipsis based on max length" do
@@ -17,7 +18,7 @@ RSpec.describe Stringer do
   end
 
   it "convert string to array" do
-    expect(Stringer.tokenize("I love to code")).to eq(["I", "love", "to", "code"])
+    expect(Stringer.tokenize("I love to code")).to eq(%w[I love to code])
   end
 
   it "remove substring from string" do

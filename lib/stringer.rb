@@ -2,39 +2,32 @@
 
 require_relative "stringer/version"
 
+# Stringer methods
 module Stringer
   class Error < StandardError; end
-  # Your code goes here...
-  def self.spacify *strings
+
+  def self.spacify(*strings)
     result = ""
     strings.each do |string|
-      if strings.at(0) == string
-        result += string
-      else
-        result += " #{string}"
-      end
+      result += string if strings.at(0) == string
+      result += " #{string}" if strings.at(0) != string
     end
     result
   end
 
-  def self.minify string, max_length
-    counter = 1
-    result = ""
+  def self.minify(string, max_length, counter = 1, result = "")
     string.chars.each do |char|
-      if counter <= max_length
-        result += char
-      else
-        if string.chars.length > max_length
-          result += "..."
-        end
+      if counter > max_length
+        string.chars.length > max_length ? result += "..." : nil
         break
       end
+      result += char
       counter += 1
     end
     result
   end
 
-  def self.replacify string, string_to_replace, string_replacement
+  def self.replacify(string, string_to_replace, string_replacement)
     if string.include? string_to_replace
       string.sub(string_to_replace, string_replacement)
     else
@@ -42,11 +35,11 @@ module Stringer
     end
   end
 
-  def self.tokenize string
+  def self.tokenize(string)
     string.split(" ")
   end
 
-  def self.removify string, string_to_remove
+  def self.removify(string, string_to_remove)
     if string.include? string_to_remove
       string.sub("#{string_to_remove} ", "")
     else
